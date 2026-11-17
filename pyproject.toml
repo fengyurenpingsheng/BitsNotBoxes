@@ -7,6 +7,7 @@ name = "wherebits"
 version = "1.0.0"
 description = "WhereBits: label-free layer selection for attention maps of vision-language models"
 readme = "README.md"
+license = {text = "MIT"}
 requires-python = ">=3.10"
 authors = [
   {name = "Haisheng Fu"}, {name = "Gexin Huang"}, {name = "Haikai Zhao"}, {name = "Jie Liang"},

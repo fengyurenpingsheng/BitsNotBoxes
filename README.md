@@ -148,6 +148,10 @@ tests/               unit tests (numpy only)
 }
 ```
 
+## License
+
+The code in this repository is released under the [MIT License](LICENSE). It depends on vlmprobe, which has its own license (PolyForm Noncommercial 1.0.0 and MIT), and the models and benchmarks keep their own licenses and terms of use.
+
 ## Acknowledgments
 
 Attention is read with [vlmprobe](https://github.com/gexinh/vlm-probe) (see its license), codec bits come from [CompressAI](https://github.com/InterDigitalInc/CompressAI), and the models are loaded with [Hugging Face Transformers](https://github.com/huggingface/transformers). The benchmarks (COCO, RefCOCO, TextVQA, V\* Bench) are downloaded from their sources and keep their own licenses.
