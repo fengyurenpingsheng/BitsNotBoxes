@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wherebits"
+version = "1.0.0"
+description = "WhereBits: label-free layer selection for attention maps of vision-language models"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  {name = "Haisheng Fu"}, {name = "Gexin Huang"}, {name = "Haikai Zhao"}, {name = "Jie Liang"},
+  {name = "Zhenman Fang"}, {name = "Jingning Han"}, {name = "Xiaoxiao Li"},
+]
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11", "Pillow>=10"]
+
+[project.optional-dependencies]
+models = [
+  "torch>=2.6",
+  "torchvision>=0.21",
+  "transformers>=5.3,<5.4",
+  "accelerate>=1.0",
+  "huggingface_hub>=0.30,<2",
+  "safetensors>=0.4",
+  "matplotlib>=3.8",
+  "vlmprobe @ git+https://github.com/gexinh/vlm-probe.git@059b7df29c51f76a2e3ea3b8f9bd668219adf92d",
+]
+faithfulness = ["compressai>=1.2.6"]
+data = ["pyarrow>=14", "huggingface_hub>=0.30,<2"]
+dev = ["pytest>=7"]
+
+[project.urls]
+Source = "https://github.com/fengyurenpingsheng/BitsNotBoxes"
+
+[tool.setuptools]
+packages = ["wherebits"]
+
+[tool.setuptools.package-data]
+wherebits = ["priors/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120

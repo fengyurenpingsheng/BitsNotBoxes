@@ -1,0 +1,19 @@
+# Install PyTorch first, with the build for your hardware (https://pytorch.org), e.g.
+#   pip install torch torchvision                                                      # CUDA (Linux default)
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu      # CPU only
+torch>=2.6
+torchvision>=0.21
+transformers>=5.3,<5.4
+accelerate>=1.0
+huggingface_hub>=0.30,<2
+safetensors>=0.4
+numpy>=1.26,<3
+scipy>=1.11
+Pillow>=10
+matplotlib>=3.8
+# faithfulness evaluation (bit axis)
+compressai>=1.2.6
+# faster dataset download for RefCOCO and TextVQA (optional; a REST fallback is used without it)
+pyarrow>=14
+# attention probes (fixed commit)
+vlmprobe[transformers] @ git+https://github.com/gexinh/vlm-probe.git@059b7df29c51f76a2e3ea3b8f9bd668219adf92d
